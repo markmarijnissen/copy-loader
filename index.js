@@ -11,8 +11,6 @@ module.exports = function(content) {
   var root = query || this.options.copyContext || this.options.context;
   url = url.substr(url.indexOf(root) + root.length);
   this.emitFile(url, content);
-
-  console.log('url',root,this.resourcePath,url);
   return "module.exports = __webpack_public_path__ + " + JSON.stringify(url);
 };
 module.exports.raw = true;
