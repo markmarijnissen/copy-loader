@@ -1,3 +1,7 @@
+# DEPRECATED
+
+`file-loader` equivalent: `file?name=[path][name].[ext]&context=./src`
+
 # copy loader for webpack
 
 ## Usage
