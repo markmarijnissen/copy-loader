@@ -1,6 +1,24 @@
 # DEPRECATED
 
-`file-loader` equivalent: `file?name=[path][name].[ext]&context=./src`
+Just use `file-loader`: `file?name=[path][name].[ext]&context=./src`. 
+
+Or, to keep a pretty syntax, add this to your `webpack.config.js`:
+
+```javascript
+    resolveLoader: { 
+        alias: {
+            'copy': 'file-loader?name=[path][name].[ext]&context=./src',
+        }
+    },
+```
+
+So you can just do
+
+```javascript
+    require("copy!somedir/myfile.html");
+```
+
+and `src/somedir/myfile.html` will get copied to `<outputPath>/somedir/myfile.html`.
 
 # copy loader for webpack
 
